@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+  </head>
+  <body>
+    <p class="head">Rock Paper Scissors</p>
+    <button
+      onclick=" 
+    
+    
+  playgame('Rock');
+
+
+
+    "
+    >
+      Rock
+    </button>
+    <button
+      onclick="
+   
+
+playgame('Paper');
+
+    
+    "
+    >
+      Paper
+    </button>
+    <button
+      onclick="
+    playgame('Scissors');
+
+
+    "
+    >
+      Scissors
+    </button>
+    <script>
+      function playgame(player_move) {
+        const comp_move = CompMove();
+        let result = "";
+
+        if (player_move === "Scissors") {
+          if (comp_move === "Rock") {
+            result = "You loose";
+          } else if (comp_move === "Paper") {
+            result = "You win";
+          } else if (comp_move === "Scissors") {
+            result = "Tie";
+          }
+        } else if (player_move === "Paper") {
+          const comp_move = CompMove();
+          let result = "";
+          if (comp_move === "Rock") {
+            result = "You win";
+          } else if (comp_move === "Paper") {
+            result = "Tie";
+          } else if (comp_move === "Scissors") {
+            result = "You loose";
+          }
+        } else if (player_move === "Rock") {
+          const comp_move = CompMove();
+          let result = "";
+          if (comp_move === "Rock") {
+            result = "Tie";
+          } else if (comp_move === "Paper") {
+            result = "You Loose";
+          } else if (comp_move === "Scissors") {
+            result = "You win";
+          }
+        }
+        alert(
+          `You picked ${player_move}. Computer picked ${comp_move}. ${result}`
+        );
+      }
+
+      function CompMove() {
+        const random_no = Math.random();
+        let comp_move = "";
+
+        if (random_no >= 0 && random_no <= 1 / 3) {
+          comp_move = "Rock";
+        } else if (random_no > 1 / 3 && random_no <= 2 / 3) {
+          comp_move = "Paper";
+        } else if (random_no > 2 / 3 && random_no <= 1) {
+          comp_move = "Scissors";
+        }
+        return comp_move;
+      }
+    </script>
+  </body>
+</html>

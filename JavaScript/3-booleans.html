@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>booleans</title>
+  </head>
+  <body>
+    <script>
+      console.log(typeof true);
+      false;
+
+      console.log(3 < 5); //gives true (comparison operator)
+      console.log(5 == "5.00"); //converts both into same type so gives true
+      console.log(5 === "5.00"); //for checking the values, this gives false
+      if (false) {
+        console.log("hello");
+      } else {
+        console.log("else");
+      }
+
+      if (30 >= 18) {
+        console.log("legal for driving");
+      } else {
+        console.log("cannot drive");
+      }
+
+      console.log(true && false); //AND
+      console.log(true || false); //true OR
+      console.log(!true); //false NOT
+
+      /*truthy value- behaves just like true
+      falsy value-behaves just like false
+      falsy- false/ 0/ ''/ NaN/ undefined/ null
+
+      values that are not in the list are all truthy */
+      if (0) {
+        //falsy
+        console.log("falsy");
+      }
+      if (5) {
+        //truthy
+        console.log("truthy");
+      }
+      //Nan= not a number
+      console.log("text" / 5); //output= NaN
+      let v;
+      console.log(v); //undefined
+
+      //ternary operator
+      const a = true ? "truthy" : "falsy";
+      console.log(a); //truthy
+      //if:else, if true then 'truthy' else 'falsy'
+      const c = false ? "truthy" : "falsy"; //?= ternary operator
+      console.log(c); //falsy
+      const b = 0 ? "yes" : "no";
+      console.log(b); //no
+
+      false && console.log("hello"); //guard operator, no output
+
+      const m = 5 && "hello"; //default operator
+      console.log(m);
+
+      const f = "EUR" || "USD";
+      console.log(f); //EUR
+
+      const g = undefined || "USD";
+      console.log(g); //USD
+    </script>
+  </body>
+</html>

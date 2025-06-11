@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+
+  <body>
+    <button>Hello</button>
+    <button class="b">Second Button</button>
+    <script>
+      /*
+      //DOM is a bulit in object- used as document
+      document.body.innerHTML = "hello"; //deletes everything else and displays hello
+      //body is the property of document which we want to use, bosy itself is also an object
+      document.title = "good job"; //document object represents/ models the web page
+      //doc object is linked to the webpage 
+
+
+      console.log(document.title); //DOM
+      document.title = "changed";
+      console.log(document.title); //changed
+
+      console.log(document.body);
+      //DOM combines JavaScript and HTML
+      console.log(typeof document.body); //object
+      console.log(document.body.innerHTML); //controls all the HTML ocde inside the body
+      document.body.innerHTML = "changed";
+      console.log(document.body.innerHTML);
+      //for changing in doc body inner we can also write HTML code
+      //for eg
+      /*document.body.innerHTML = "<button>Changed</button>";
+      console.log(document.body.innerHTML); */
+
+      //method- function which is saved inside an object
+      //method- query selector
+      console.log(document.querySelector("button")); //tells the JS what to get fromthe HTML code
+      console.log(document.querySelector("button").innerHTML); //will give HTML inside the button
+      document.querySelector("button").innerHTML = "changed again";
+
+      console.log(document.querySelector(".b")); //class selector
+    </script>
+  </body>
+</html>

@@ -1,0 +1,111 @@
+
+  .thumb {
+    width: 100%;
+  }
+  
+  .h1 {
+    margin-top: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 21px;
+    margin-bottom: 12px;
+   
+  }
+
+  .first {
+  }
+  .channel {
+  }
+  .row {
+    margin-bottom: 12px;
+    position: relative;
+  }
+  .time {
+    position: absolute;
+    background-color: black;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    font-family: Roboto, Arial;
+    font-weight: bold;
+    font-size: 10px;
+    color: white;
+    bottom: 10px;
+    right: 6px;
+    border-radius: 2px;
+    
+
+  }
+  .c1 ,
+  .v1,
+  .h1 {
+    z-index: 100;
+  }
+  .info {
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+  }
+  .pfp {
+    width: 40px;
+    border-radius: 25px;
+  }
+  .videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 15px;
+    row-gap: 40px;
+    
+    
+  }
+  .c1 {
+    margin-bottom: 4px;
+  }
+  .c1,
+  .v1 {
+    font-size: 13px;
+    color: rgb(96, 96, 96);
+  }
+  .pfp1 {
+    width: 60px;
+    border-radius: 30px;
+  }
+  .channel .youtuber {
+    position: absolute;
+padding-left: 10px;
+padding-right: 10px;
+padding-top: 5px;
+padding-bottom: 5px;
+width: 180px;
+display: flex;
+align-items: center;
+border: 1px;
+z-index: 200;
+border-color: black;
+border-radius: 2px;
+background-color: white;
+
+transition: opacity 0.15s;
+opacity: 0;
+  }
+  .channel {
+    position: relative;
+  }
+  .yt_name {
+    font-family: Roboto, Arial;
+    font-weight: bold;
+    font-size: 14px;
+  }
+  .no_sub {
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(96, 96, 96);
+
+  }
+  .channel:hover .youtuber {
+    opacity: 100;
+    z-index: 200;
+  }

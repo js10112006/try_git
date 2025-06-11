@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>objects</title>
+  </head>
+
+  <body>
+    <script>
+      console.log("hello".length); //output-5
+      console.log("hello".toUpperCase()); //output- HELLO
+      //js automatically wraps the string in a object, this property is called auto boxing
+      const object1 = {
+        message: "hello",
+      };
+      const object2 = object1; //copies the reference , both point towards message: hello
+      //objects are the references
+      object1.message = "good job!";
+
+      console.log(object1);
+      console.log(object2);
+      //we cannot compare objects directly
+      const object3 = {
+        message: "good job!",
+      };
+      console.log(object3 === object1); //gives false, even though thy have same values, this line compares the references
+      console.log(object2 === object1); //both point towards same referenece, hence gives true
+
+      //for comparing values
+      console.log(object1.message === object3.message); //gives true
+      const object4 = {
+        message: "good job!",
+        price: 799,
+      };
+      //const message = object4.message;
+      //here the message good job  is stored in a variable called messag, since the attribute and the variable name is same, this sentence can also be written as=
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      //short hand property
+      const object5 = {
+        message1: "message1",
+      };
+      console.log(object5);
+      //shortcut
+
+      const obj = {
+        message,
+        /*method: function function1() {
+          console.log('method');
+        }*/
+        //the above code can also be written as
+        method() {
+          console.log("method");
+        },
+      };
+      console.log(obj);
+      obj.method();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>objects</title>
+  </head>
+
+  <body>
+    <script>
+      const product = {
+        name: "bottle", //property:value
+        price: 800,
+      };
+      console.log(product); //both will be displayed
+      console.log(product.name); //only name string
+      console.log(product.price);
+      //changing vale in object
+      product.name = "socks";
+      console.log(product.name);
+
+      //object starts with curly brackets
+      //to access object.property (dot notation)
+      console.log(product.colour); //givesundefined because the property doesnot exist
+      //object is mutable
+      //updation
+      product.colour = "red";
+      console.log(product);
+      //deletion
+      delete product.colour;
+      console.log(product);
+
+      const prod2 = {
+        name: "coffee",
+        "item-flavour": "mocha",
+
+        //nested
+        rating: {
+          stars: 4.5,
+          count: 65,
+        },
+        func: function anything() {
+          console.log("inside this function");
+        },
+      };
+      console.log(prod2.name); //coffee (dot notation)
+      console.log(prod2["name"]); //coffee {bracket notation}
+
+      //for some properties having variable names using '-', the console.log using dot notation reads it as a negative sign
+
+      //console.log(prod2.item - flavour); //error
+      console.log(prod2["item-flavour"]); //mocha
+
+      console.log(prod2.rating);
+      console.log(prod2.rating.count);
+      prod2.func();
+      console.log(prod2.func);
+
+      console.log(typeof console); //console is an object
+      console.log(typeof console.log); //function
+
+      //built in objects - console, math random, JSON,
+      //JSON= JavaScript Object Notation
+      //in JSON , all properties and values must be in double quotes, doesnt support single quote except the numbers
+      //syntax of JSON is more universal, js syntax can be understood by js only
+
+      //converting js to JSON
+
+      console.log(JSON.stringify(prod2));
+      //JSON doesnt supprot functions
+      console.log(typeof JSON.stringify(prod2)); //string
+
+      //JSON TO js
+      const jsonstring = JSON.stringify(prod2);
+      console.log(JSON.parse(jsonstring));
+
+      //in the rock paper sissorcs if the page is refreshed all the variables are reset to zero again
+      //local storage helps in storing all the variables and variables do not get deleted
+      //local storage (another built in object)
+
+      localStorage.setItem("message", "hello");
+    </script>
+  </body>
+</html>
